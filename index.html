@@ -4,21 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>basic project :Guess the Number </title>
+    <title>basic project: Guess the Number</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
 
         * {
             margin: 0;
             padding: 0;
-
-
         }
 
         .background {
             background-color: #212121;
             color: whitesmoke;
-            /* background-color: var(--input); */
         }
 
         .font {
@@ -36,8 +33,6 @@
             font-family: "Poppins", sans-serif;
             font-optical-sizing: auto;
             font-weight: 600;
-
-            /* Semi-bold weight */
             font-style: normal;
             color: whitesmoke;
         }
@@ -46,18 +41,13 @@
             background-color: whitesmoke;
             color: #212121;
             text-align: center;
-            height: 05vmin;
+            height: 5vmin;
             width: 50vw;
             margin: 30px;
             padding: 20px;
             border: 2px solid black;
-            position: relative;
-            top: 0px;
-            margin-left: auto;
-            margin-right: auto;
             cursor: pointer;
-
-
+            transition: all 0.3s;
         }
 
         .button:hover {
@@ -65,60 +55,59 @@
             color: orange;
         }
 
-        .align {
-            position: relative;
-            top: 20px;
-            left: 20px;
-        }
-
         .container {
-
             background-color: #212121;
             border: 1px solid rgb(175, 175, 175);
+            max-width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
         }
-
-        .a1 {
-
-            border: 1px solid rgb(175, 175, 175);
-
-        }
-
-        .a3 {
-            margin-top: 12px;
-            display: flex;
-            justify-content: center;
-            margin-left: auto;
-            margin-right: auto;
-            border: 1px solid rgb(175, 175, 175);
-
-        }
-
-
-
 
         .wrap {
             display: flex;
             justify-content: center;
+            flex-wrap: wrap;
         }
 
         input {
             height: 3vw;
-            width: 40vw;
+            width: 80vw;
+            max-width: 400px;
             border: 2px solid black;
-        }
-
-        .b2 {
-
-            position: relative;
-            top: 0px;
-            margin-left: 310px;
-
-
+            margin-bottom: 10px;
         }
 
         .box {
-            margin-left: 310px;
+            text-align: center;
+        }
 
+        @media (min-width: 600px) {
+            input {
+                width: 50vw;
+            }
+
+            .button {
+                width: 40vw;
+            }
+        }
+
+        @media (min-width: 900px) {
+            input {
+                width: 40vw;
+            }
+
+            .button {
+                width: 30vw;
+            }
+
+            .b2 {
+                text-align: center;
+            }
+
+            .box {
+                text-align: left;
+                margin-left: 310px;
+            }
         }
     </style>
 </head>
@@ -131,8 +120,7 @@
             <h4 class="font1">You have 10 attempts to guess the right number </h4>
         </div>
         <div class="wrap">
-
-          <div>
+            <div>
                 <div class="a3">
                     <h3 class="font1">GUESS THE NUMBER: &nbsp;</h3>
                     <input type="number" class="a3" id="main" required>
@@ -140,15 +128,12 @@
                 <div class="button font1" id="submit" onclick="checkCorrect(event)">
                     SUBMIT YOUR GUESS
                 </div>
-                </div>
-         
+            </div>
         </div>
-
         <div class="box font1">
             <div class="oplabel">Previous Guesses</div>
             <div class="oplabel">Remaining Guesses :10</div>
         </div>
-
     </div>
     <script src="script.js"></script>
 </body>
