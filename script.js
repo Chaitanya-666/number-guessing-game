@@ -3,7 +3,7 @@ let rm=Math.floor((Math.random()*100)+1);
 let count=10;
 let pre=[];
 let oplabel=document.querySelectorAll('.oplabel');
-console.log(rm);
+
 
 function checkCorrect(event) {
    event.preventDefault();
