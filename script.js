@@ -25,7 +25,7 @@ function checkCorrect(event) {
     }
 
     else{
-        alert("better luck next time please reload the page if u wish to try again");
+          alert(`Random number was  ${rm} , better luck next time please reload the page if u wish to try again`);
         return;
     }
     }
